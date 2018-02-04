@@ -7,6 +7,10 @@ A single-file that shows the whole inventory of your AWS services on a single pa
 * Clone or copy the `index.html` file to your computer
 * Open the `index.html` file in your browser
 
+## How it looks
+
+![screenshot](/example-screenshot.png?raw=true "Example AWS Inventory")
+
 ## How it works
 
 The AWS Inventory is using the AWS JavaScript SDK and a sprinkle of Bootstrap,
@@ -38,6 +42,14 @@ https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeInstanc
 The table will include the headers described in `headings`, which also use
 JMESPath, like in the example for `State.Name` so that nested elements can be
 references.
+
+## Notes
+
+The AWS JavaScript SDK does not support all the AWS services when used in a
+browser, because not all services have CORS enabled.
+
+The list of CORS supported services is available at
+https://github.com/aws/aws-sdk-js/blob/master/SERVICES.md
 
 ## Contributing
 
